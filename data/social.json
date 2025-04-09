@@ -1,0 +1,22 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/ParthJain18",
+    "icon": "github"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://linkedin.com/in/parthjain18",
+    "icon": "linkedin"
+  },
+  {
+    "name": "Email",
+    "url": "mailto:parthjain1812@gmail.com",
+    "icon": "email"
+  },
+  {
+    "name": "Portfolio",
+    "url": "https://example.com",
+    "icon": "website"
+  }
+]

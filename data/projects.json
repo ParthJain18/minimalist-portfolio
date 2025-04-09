@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "description": "A full-featured e-commerce platform with product management, cart functionality, payment processing, and order tracking.",
+    "image": "/placeholder.svg?height=600&width=800",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Prisma"],
+    "demoUrl": "https://example.com/demo",
+    "githubUrl": "https://github.com/username/ecommerce-platform",
+    "features": [
+      "User authentication and profile management",
+      "Product catalog with search and filtering",
+      "Shopping cart and checkout process",
+      "Payment processing with Stripe",
+      "Order history and tracking",
+      "Admin dashboard for product management"
+    ],
+    "challenges": "One of the main challenges was implementing a performant search functionality that could handle thousands of products. I solved this by implementing server-side search with pagination and caching strategies."
+  },
+  {
+    "id": "task-management-app",
+    "title": "Task Management App",
+    "description": "A collaborative task management application with real-time updates, task assignment, and progress tracking.",
+    "image": "/placeholder.svg?height=600&width=800",
+    "technologies": ["React", "Firebase", "Material UI", "Redux"],
+    "demoUrl": "https://example.com/demo",
+    "githubUrl": "https://github.com/username/task-management-app"
+  },
+  {
+    "id": "weather-dashboard",
+    "title": "Weather Dashboard",
+    "description": "A weather dashboard that displays current conditions and forecasts for multiple locations with interactive visualizations.",
+    "image": "/placeholder.svg?height=600&width=800",
+    "technologies": ["Vue.js", "D3.js", "OpenWeather API", "Vite"],
+    "demoUrl": "https://example.com/demo",
+    "githubUrl": "https://github.com/username/weather-dashboard"
+  },
+  {
+    "id": "fitness-tracker",
+    "title": "Fitness Tracker",
+    "description": "A mobile-first fitness tracking application that allows users to log workouts, track progress, and set goals.",
+    "image": "/placeholder.svg?height=600&width=800",
+    "technologies": ["React Native", "TypeScript", "Redux", "Firebase"],
+    "demoUrl": "https://example.com/demo",
+    "githubUrl": "https://github.com/username/fitness-tracker"
+  },
+  {
+    "id": "recipe-finder",
+    "title": "Recipe Finder",
+    "description": "A recipe search application that allows users to find recipes based on ingredients they have on hand.",
+    "image": "/placeholder.svg?height=600&width=800",
+    "technologies": ["JavaScript", "HTML", "CSS", "Spoonacular API"],
+    "demoUrl": "https://example.com/demo",
+    "githubUrl": "https://github.com/username/recipe-finder"
+  },
+  {
+    "id": "portfolio-website",
+    "title": "Portfolio Website",
+    "description": "A personal portfolio website showcasing my projects, skills, and experience with a modern minimalist design.",
+    "image": "/placeholder.svg?height=600&width=800",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "demoUrl": "https://example.com/demo",
+    "githubUrl": "https://github.com/username/portfolio-website"
+  },
+  {
+    "id": "blog-platform",
+    "title": "Blog Platform",
+    "description": "A full-featured blog platform with content management, commenting system, and analytics dashboard.",
+    "image": "/placeholder.svg?height=600&width=800",
+    "technologies": ["Next.js", "MDX", "Tailwind CSS", "Prisma", "PostgreSQL"],
+    "demoUrl": "https://example.com/demo",
+    "githubUrl": "https://github.com/username/blog-platform"
+  }
+]
