@@ -5,6 +5,7 @@
     "date": "March 2025",
     "description": "Co-authored a research paper on log generation for collaborative problem-solving, presented at COMPUTE 2024 and published by Springer.",
     "image": "/images/compute24.png",
+    "location": "IIT Gandhinagar, India",
     "emoji": "/images/success.svg",
     "content": "<p>Presented a research paper titled <strong>“Enhancing and Analyzing Log Generation for Collaborative Problem-Solving Activities: Video Analysis and OCR Techniques”</strong> at ACM India’s COMPUTE 2024 Conference at IIT Gandhinagar. This work was the result of an internship at e-Yantra, IIT Bombay.</p><p>The research focused on analyzing screen recordings and log data using OCR and video processing to extract insights on student interactions in a digital collaborative platform. The paper was published by Springer as part of the Communications in Computer and Information Science (CCIS, volume 2400) series.</p><h3>Key Contributions:</h3><ul><li>Built a data pipeline with OpenCV, OCR, and Pandas that boosted data usability by over 200%</li><li>Analyzed learner behavior in computer-based environments</li><li>Presented and defended the work in front of academic peers</li></ul>",
     "gallery": [
@@ -29,6 +30,7 @@
     "description": "Won first place at Unplugged 2.0 Hackathon hosted by D. J. Sanghvi College with a smart travel assistant project powered by AI and real-time data processing.",
     "image": "/images/unplugged.png",
     "emoji": "/images/gold-medal.svg",
+    "location": "D. J. Sanghvi College, Mumbai, India",
     "content": "<p>This hardware-focused hackathon challenged participants to bridge physical devices with smart software. Our team developed a travel assistant app powered by AI agents, integrated with real-time sensor data, maps, and crash detection.</p><h3>Key Contributions:</h3><ul><li>Developed a context-aware AI agent using LangGraph for dynamic route queries</li><li>Built a crash detection model with YOLO v11 trained on custom dataset</li><li>Created a real-time smart routing system integrating incident data</li><li>Built a QGIS-powered city dashboard for better administrative planning</li></ul><p>This was a milestone victory that helped me expand my skills beyond traditional software into IoT and smart city technologies.</p>",
     "gallery": [
       {
@@ -36,7 +38,7 @@
         "caption": "Live demo of crash detection and smart routing"
       }
     ],
-    "tags": ["hackathon", "AI", "smart-cities", "iot"],
+    "tags": ["hackathon", "AI", "Langchain", "smart-cities", "iot"],
     "links": [
       {
         "label": "Project Demo",
@@ -52,6 +54,7 @@
     "description": "Achieved 5th place in the national-level e-Yantra Robotics Competition 2023-24 with a project involving machine learning, image processing, and GIS.",
     "image": "/images/eyrc-24.png",
     "emoji": "/images/party-popper.svg",
+    "location": "IIT Bombay, India",
     "content": "<p>Our team developed a project under the GeoGuide theme called Vanguard. We built a robot that could follow lines using WebSockets, detect objects using transfer learning, and map its position using QGIS.</p><h3>Key Contributions:</h3><ul><li>Integrated Dijkstra’s Algorithm for pathfinding</li><li>Fine-tuned an image classifier to run on 100x100 low-res input</li><li>Plotted real-time robot movement using GIS</li></ul><p>This interdisciplinary project strengthened my foundations in robotics, ML, and spatial data processing.</p>",
     "gallery": [
       {
@@ -59,7 +62,7 @@
         "caption": "Team Vanguard during eYRC"
       }
     ],
-    "tags": ["robotics", "gis", "machine-learning"],
+    "tags": ["robotics", "QGIS", "CNN", "machine-learning", "algorithms"],
     "links": [
       {
         "label": "Project Repo",
