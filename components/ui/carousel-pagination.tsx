@@ -8,7 +8,7 @@ interface CarouselPaginationProps {
 
 export function CarouselPagination({ api, itemCount, currentSlide }: CarouselPaginationProps) {
     return (
-        <div className="hidden md:flex justify-center mt-6 gap-2">
+        <div className="hidden md:flex justify-center md:mt-3 gap-2">
             {Array.from({ length: itemCount }).map((_, index) => (
                 <button
                     key={index}

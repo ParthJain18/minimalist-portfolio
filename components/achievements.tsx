@@ -48,15 +48,15 @@ export default function Achievements({ className = "" }: { className?: string })
   }, [api])
 
   return (
-    <section className={cn("min-h-screen w-full px-2 py-2 md:py-12", className)}>
-      <div className="container px-2 sm:px-6 md:px-4">
+    <section className={cn("h-screen w-full flex items-center justify-center px-2 py-2", className)}>
+      <div className="container flex flex-col px-2 sm:px-6 md:px-4">
         <SectionTitle
           title="Notable Achievements"
           subtitle="Key milestones and recognition throughout my career journey."
           className="ml-4 sm:ml-6 md:ml-0"
         />
 
-        <div className="relative w-full mx-auto max-w-7xl">
+        <div className="relative w-full mx-auto max-w-7xl flex-1 flex flex-col justify-center">
           <Carousel
             opts={{
               align: "center",
@@ -69,12 +69,10 @@ export default function Achievements({ className = "" }: { className?: string })
               {achievementsData.map((achievement, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full flex justify-center pl-4"
+                  className="basis-full flex justify-center items-center pl-4"
                 >
-                  <div className="w-full">
-                    <div className="h-full flex items-center justify-center">
-                      <AchievementCard achievement={achievement} />
-                    </div>
+                  <div className="w-full flex items-center justify-center">
+                    <AchievementCard achievement={achievement} />
                   </div>
                 </CarouselItem>
               ))}

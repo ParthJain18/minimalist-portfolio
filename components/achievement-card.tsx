@@ -25,13 +25,13 @@ interface AchievementProps {
 
 export function AchievementCard({ achievement }: { achievement: AchievementProps }) {
     return (
-        <Card className="overflow-hidden border shadow-md md:shadow-lg w-full h-auto md:h-[450px] flex flex-col md:flex-row md:gap-3">
+        <Card className="overflow-hidden border shadow-md md:shadow-lg w-full my-4 flex flex-col md:flex-row md:gap-3">
             {/* Title section for mobile only */}
             <div className="block md:hidden px-6 py-3 w-full">
                 <h3 className="text-lg font-bold mb-1">{achievement.title}</h3>
             </div>
 
-            <div className="relative w-full h-[150px] md:w-1/2 md:h-full flex items-center justify-center md:aspect-square px-6 md:pl-6">
+            <div className="relative w-full h-[15vh] md:w-1/2 md:h-[55vh] flex items-center justify-center px-6 md:pl-6">
                 <Image
                     src={achievement.image}
                     alt={achievement.title}
@@ -50,7 +50,7 @@ export function AchievementCard({ achievement }: { achievement: AchievementProps
                 </div>
             </div>
 
-            <CardContent className="py-3 md:p-5 md:w-1/2 flex flex-col justify-start md:justify-center max-h-[200px] md:max-h-none overflow-y-auto md:overflow-visible">
+            <CardContent className="py-3 md:p-5 md:w-1/2 flex flex-col justify-start md:justify-center max-h-[200px] md:max-h-[40vh] overflow-y-auto md:overflow-visible">
                 {/* Title only for desktop */}
                 <h3 className="hidden md:block text-lg md:text-3xl font-bold mb-2 md:mb-6">{achievement.title}</h3>
 
