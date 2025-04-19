@@ -19,14 +19,14 @@ export default function Hero({ className = "" }: { className?: string }) {
   }, [titles.length])
 
   return (
-    <section className="snap-start flex flex-col items-center justify-center h-screen py-10 md:py-28 px-6 md:px-0 overflow-hidden">
+    <section className="snap-start flex flex-col items-center justify-start md:justify-center h-screen md:py-14 px-6 md:px-0 mt-20 md:mt-0 overflow-hidden">
       <div className="grid md:grid-cols-2 gap-8 md:gap-20 items-center w-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className={cn(
-            "relative w-full max-w-[180px] md:max-w-sm mx-auto md:ml-auto md:mr-0 aspect-square rounded-2xl overflow-hidden",
+            "relative w-full max-w-[160px] md:max-w-xs mx-auto md:ml-auto md:mr-0 aspect-square rounded-2xl overflow-hidden",
             "border-4 border-background shadow-xl",
           )}
         >
@@ -56,19 +56,19 @@ export default function Hero({ className = "" }: { className?: string }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+            className="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight"
           >
             {name}
           </motion.h1>
 
-          <div className="h-8 md:h-12">
+          <div className="h-6 md:h-12">
             <motion.h2
               key={titleIndex}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="text-lg md:text-2xl text-muted-foreground"
+              className="text-base md:text-2xl text-muted-foreground"
             >
               {titles[titleIndex]}
             </motion.h2>
@@ -78,7 +78,7 @@ export default function Hero({ className = "" }: { className?: string }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base md:text-lg text-muted-foreground w-full md:max-w-xl mx-auto md:mx-0"
+            className="text-sm md:text-lg text-muted-foreground w-full md:max-w-xl mx-auto md:mx-0"
           >
             {bio}
           </motion.p>

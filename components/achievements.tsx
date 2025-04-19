@@ -48,12 +48,12 @@ export default function Achievements({ className = "" }: { className?: string })
   }, [api])
 
   return (
-    <section className={cn("h-screen w-full flex items-center justify-center px-2 py-2", className)}>
+    <section className={cn("min-h-screen w-full flex items-start justify-center px-2", className)}>
       <div className="container flex flex-col px-2 sm:px-6 md:px-4">
         <SectionTitle
           title="Notable Achievements"
           subtitle="Key milestones and recognition throughout my career journey."
-          className="ml-4 sm:ml-6 md:ml-0"
+          className="ml-4 sm:ml-6 md:ml-10 text-xs sm:text-sm md:text-base mt-4 md:mt-10"
         />
 
         <div className="relative w-full mx-auto max-w-7xl flex-1 flex flex-col justify-center">
@@ -62,7 +62,7 @@ export default function Achievements({ className = "" }: { className?: string })
               align: "center",
               loop: true,
             }}
-            className="w-full mx-auto"
+            className="w-full md:w-5/6 mx-auto"
             setApi={setApi}
           >
             <CarouselContent className="snap-x snap-mandatory md:px-4 gap-x-2 md:gap-x-4">
@@ -81,23 +81,25 @@ export default function Achievements({ className = "" }: { className?: string })
             {/* Hide navigation arrows on mobile */}
             <div className="hidden sm:block absolute top-1/2 -translate-y-1/2 -left-4 sm:-left-2 md:-left-8 lg:-left-12 z-20">
               <CarouselPrevious
-                className="relative h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-full"
+                className="relative h-6 w-6 sm:h-7 sm:w-7 md:h-9 md:w-9 lg:h-11 lg:w-11 rounded-full"
                 aria-label="Previous achievement"
               />
             </div>
             <div className="hidden sm:block absolute top-1/2 -translate-y-1/2 -right-4 sm:-right-2 md:-right-8 lg:-right-12 z-20">
               <CarouselNext
-                className="relative h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 rounded-full"
+                className="relative h-6 w-6 sm:h-7 sm:w-7 md:h-9 md:w-9 lg:h-11 lg:w-11 rounded-full"
                 aria-label="Next achievement"
               />
             </div>
           </Carousel>
 
-          <CarouselPagination
-            api={api}
-            itemCount={achievementsData.length}
-            currentSlide={currentSlide}
-          />
+          {/* <div className="my-2 md:my-12">
+        <CarouselPagination
+          api={api}
+          itemCount={achievementsData.length}
+          currentSlide={currentSlide}
+        />
+        </div> */}
         </div>
       </div>
     </section>

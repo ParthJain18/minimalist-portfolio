@@ -80,4 +80,9 @@ module.exports = {
   corePlugins: {
     scrollSnapType: true,
   },
+  variants: {
+    extend: {
+      scrollSnapType: ["responsive"],
+    },
+  }
 }

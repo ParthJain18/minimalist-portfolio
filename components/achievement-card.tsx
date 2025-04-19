@@ -25,21 +25,22 @@ interface AchievementProps {
 
 export function AchievementCard({ achievement }: { achievement: AchievementProps }) {
     return (
-        <Card className="overflow-hidden border shadow-md md:shadow-lg w-full my-4 flex flex-col md:flex-row md:gap-3">
+        <Card className="overflow-hidden border shadow-md md:shadow-lg my-4 flex flex-col md:flex-row md:gap-3 justify-start ">
             {/* Title section for mobile only */}
-            <div className="block md:hidden px-6 py-3 w-full">
-                <h3 className="text-lg font-bold mb-1">{achievement.title}</h3>
+            <div className="block md:hidden px-6 pt-6 w-full">
+                <h3 className="text-lg font-bold">{achievement.title}</h3>
             </div>
 
-            <div className="relative w-full h-[15vh] md:w-1/2 md:h-[55vh] flex items-center justify-center px-6 md:pl-6">
+            <div className="relative w-full h-[15vh] md:w-[55vh] md:h-[50vh] flex items-center justify-center px-6 md:pl-6 py-0 md:py-4">
                 <Image
                     src={achievement.image}
                     alt={achievement.title}
                     width={800}
                     height={800}
                     className="object-cover rounded-md w-full h-full object-top md:object-center"
+                    style={{ objectPosition: 'center top' }}
                 />
-                <div className="absolute bottom-2 right-3 md:right-[-6px] h-8 w-8 md:h-12 md:w-12 flex items-center justify-center animate-scale">
+                <div className="absolute bottom-2 right-3 md:right-[-6px] h-[30vh] w-8 md:h-12 md:w-12 flex items-center justify-center animate-scale">
                     <Image
                         src={achievement.emoji}
                         alt={`${achievement.title} emoji`}
@@ -50,23 +51,23 @@ export function AchievementCard({ achievement }: { achievement: AchievementProps
                 </div>
             </div>
 
-            <CardContent className="py-3 md:p-5 md:w-1/2 flex flex-col justify-start md:justify-center max-h-[200px] md:max-h-[40vh] overflow-y-auto md:overflow-visible">
+            <CardContent className="py-3 md:p-5 md:w-3/5 flex flex-col justify-start md:justify-center max-h-[none] md:max-h-[50vh] overflow-y-auto">
                 {/* Title only for desktop */}
-                <h3 className="hidden md:block text-lg md:text-3xl font-bold mb-2 md:mb-6">{achievement.title}</h3>
+                <h3 className="hidden md:block text-lg md:text-2xl font-bold mb-2 md:mb-4">{achievement.title}</h3>
 
                 {/* Location with icon */}
                 {achievement.location && (
-                    <div className="flex items-center gap-1 mb-4 sm:my-4 md:mb-5 text-muted-foreground">
+                    <div className="flex items-center gap-1 mb-3 sm:my-3 md:mb-4 text-muted-foreground">
                         <MapPin size={20} className="h-3 w-3 md:h-4 md:w-4" />
-                        <span className="text-sm md:text-lg">{achievement.location}</span>
+                        <span className="text-sm md:text-base">{achievement.location}</span>
                     </div>
                 )}
 
-                <p className="text-sm md:text-lg text-muted-foreground mb-6 md:mb-8 line-clamp-3 md:line-clamp-none">
+                <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">
                     {achievement.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4 md:mb-8">
+                <div className="flex flex-wrap gap-2 mb-3 md:mb-6">
                     {achievement.tags?.length ? (
                         achievement.tags.map((tag, i) => (
                             <Badge key={i} variant="outline" className="text-xs md:text-sm">{tag}</Badge>

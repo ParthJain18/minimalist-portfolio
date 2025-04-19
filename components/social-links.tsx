@@ -33,7 +33,7 @@ export default function SocialLinks({ className = "" }: { className?: string }) 
   }
 
   return (
-    <section className={cn("flex items-center justify-center py-20 md:py-28", className)}>
+    <section className={cn("flex items-center justify-center py-10 md:py-28", className)}>
       <motion.div variants={container} initial="hidden" animate="show" className="flex flex-wrap justify-center gap-3">
         {socialData.map((social) => (
           <motion.div key={social.name} variants={item}>
