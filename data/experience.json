@@ -1,59 +1,66 @@
 [
   {
-    "id": "tech-innovations",
-    "company": "Tech Innovations",
-    "title": "Frontend Developer Intern",
-    "period": "May 2023 - August 2023",
+    "id": "exp-1",
+    "title": "Senior Software Engineer",
+    "company": "TechCorp",
+    "period": "Jan 2022 - Present",
     "location": "San Francisco, CA",
-    "logo": "/placeholder.svg?height=200&width=200",
-    "overview": "Worked as a frontend developer intern at Tech Innovations, a leading tech company specializing in SaaS products for enterprise clients. Collaborated with a team of experienced developers to build and maintain web applications.",
+    "description": "Leading the development of next-generation web applications with a focus on performance and user experience.",
+    "logo": "/logos/techcorp.svg",
+    "technologies": ["React", "TypeScript", "Node.js", "GraphQL"],
     "responsibilities": [
-      "Developed responsive user interfaces using React and TypeScript",
-      "Collaborated with designers to implement pixel-perfect UI components",
-      "Participated in code reviews and implemented feedback from senior developers",
-      "Optimized application performance and improved load times by 30%",
-      "Assisted in implementing automated testing using Jest and React Testing Library"
-    ],
-    "achievements": [
-      "Implemented a new feature that increased user engagement by 15%",
-      "Reduced bundle size by 25% through code optimization techniques",
-      "Received recognition for exceptional problem-solving skills"
-    ],
-    "technologies": ["React", "TypeScript", "Redux", "Tailwind CSS", "Jest", "Git"],
-    "content": "<p>During my internship at Tech Innovations, I had the opportunity to work on their flagship product, a data visualization platform used by Fortune 500 companies. I was part of a cross-functional team following agile methodologies, participating in daily stand-ups, sprint planning, and retrospectives.</p><p>One of my main projects was redesigning the dashboard interface to improve usability and performance. I worked closely with UX designers to implement a more intuitive layout and optimized the rendering of complex data visualizations, resulting in a 30% improvement in load times.</p>"
+      "Architected and implemented scalable frontend solutions",
+      "Led a team of 5 developers to deliver projects on schedule",
+      "Reduced application load time by 40% through code optimization",
+      "Implemented CI/CD pipelines to streamline the deployment process"
+    ]
   },
   {
-    "id": "digital-solutions",
-    "company": "Digital Solutions",
-    "title": "Web Development Intern",
-    "period": "January 2023 - April 2023",
-    "location": "Remote",
-    "logo": "/placeholder.svg?height=200&width=200",
-    "overview": "Served as a web development intern at Digital Solutions, a digital agency creating websites and applications for clients across various industries.",
+    "id": "exp-2",
+    "title": "Frontend Developer",
+    "company": "InnovateSoft",
+    "period": "Mar 2020 - Dec 2021",
+    "location": "Seattle, WA",
+    "description": "Developed responsive web applications with modern JavaScript frameworks.",
+    "logo": "/logos/innovatesoft.svg",
+    "technologies": ["Angular", "JavaScript", "SCSS", "REST APIs"],
     "responsibilities": [
-      "Built responsive websites using HTML, CSS, and JavaScript",
-      "Implemented CMS solutions using WordPress and Headless CMS platforms",
-      "Assisted senior developers with bug fixes and feature implementations",
-      "Created documentation for client websites and internal processes",
-      "Participated in client meetings and requirement gathering sessions"
-    ],
-    "technologies": ["HTML", "CSS", "JavaScript", "WordPress", "PHP", "SCSS"]
+      "Built and maintained responsive web applications",
+      "Collaborated with designers to implement pixel-perfect UI",
+      "Integrated frontend with backend services via REST APIs",
+      "Participated in code reviews and contributed to coding standards"
+    ]
   },
   {
-    "id": "creative-labs",
-    "company": "Creative Labs",
-    "title": "UI/UX Design Intern",
-    "period": "June 2022 - August 2022",
+    "id": "exp-3",
+    "title": "Web Developer Intern",
+    "company": "StartupHub",
+    "period": "Jun 2019 - Feb 2020",
+    "location": "Austin, TX",
+    "description": "Assisted in the development of web applications for early-stage startups.",
+    "logo": "/logos/startuphub.svg",
+    "technologies": ["HTML", "CSS", "JavaScript", "jQuery"],
+    "responsibilities": [
+      "Developed responsive landing pages for multiple clients",
+      "Assisted senior developers with bug fixes and feature implementation",
+      "Created interactive UI components using vanilla JavaScript",
+      "Optimized website performance and accessibility"
+    ]
+  },
+  {
+    "id": "exp-4",
+    "title": "Junior Developer",
+    "company": "CodeAcademy",
+    "period": "Sep 2018 - May 2019",
     "location": "Boston, MA",
-    "logo": "/placeholder.svg?height=200&width=200",
-    "overview": "Worked as a UI/UX design intern at Creative Labs, a design-focused agency creating digital experiences for startups and established brands.",
+    "description": "Worked on educational web platforms aimed at teaching programming to beginners.",
+    "logo": "/logos/codeacademy.svg",
+    "technologies": ["React", "JavaScript", "Firebase", "Material UI"],
     "responsibilities": [
-      "Created wireframes and prototypes using Figma and Adobe XD",
-      "Conducted user research and usability testing sessions",
-      "Collaborated with developers to ensure design implementation accuracy",
-      "Assisted in creating design systems and component libraries",
-      "Participated in brainstorming sessions and design critiques"
-    ],
-    "technologies": ["Figma", "Adobe XD", "Illustrator", "Photoshop", "InVision", "Sketch"]
+      "Contributed to the development of interactive coding exercises",
+      "Implemented user authentication and profile management features",
+      "Fixed UI/UX issues on the learning platform",
+      "Participated in user testing sessions to gather feedback"
+    ]
   }
 ]
