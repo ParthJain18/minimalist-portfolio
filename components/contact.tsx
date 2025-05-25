@@ -46,7 +46,7 @@ export default function Contact({ className = "" }: { className?: string }) {
   }
 
   return (
-    <section id="contact" className={cn("min-h-screen flex items-center justify-center py-20 md:py-28", className)}>
+    <section id="contact" className={cn("min-h-screen flex items-center justify-center py-12 md:py-12 pt-4 md:pt-12", className)}>
       <div className="container max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export default function Contact({ className = "" }: { className?: string }) {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 pb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium">

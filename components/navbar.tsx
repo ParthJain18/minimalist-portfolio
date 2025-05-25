@@ -16,7 +16,15 @@ export default function Navbar() {
     setIsOpen(false)
     const container = document.getElementById('fullpage-container')
     if (container && container.children[index]) {
-      (container.children[index] as HTMLElement).scrollIntoView({ behavior: 'smooth' })
+      const targetElement = container.children[index] as HTMLElement
+      const navbarHeight = 64 // h-16 = 64px
+      const elementPosition = targetElement.offsetTop
+      const offsetPosition = elementPosition - navbarHeight
+
+      container.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
