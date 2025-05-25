@@ -12,8 +12,9 @@ import {
   type CarouselApi
 } from "@/components/ui/carousel"
 import { SectionTitle } from "@/components/ui/section-title"
-import { CarouselPagination } from "@/components/ui/carousel-pagination"
 import { AchievementCard } from "@/components/achievement-card"
+import { motion } from "framer-motion"
+
 
 export default function Achievements({ className = "" }: { className?: string }) {
   const [api, setApi] = useState<CarouselApi>()
@@ -50,11 +51,19 @@ export default function Achievements({ className = "" }: { className?: string })
   return (
     <section className={cn("min-h-screen w-full flex items-start justify-center px-2", className)}>
       <div className="container flex flex-col px-2 sm:px-6 md:px-4">
-        <SectionTitle
-          title="Notable Achievements"
-          subtitle="Key milestones and recognition throughout my career journey."
-          className="ml-4 sm:ml-6 md:ml-10 text-xs sm:text-sm md:text-base mt-4 md:mt-10"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-10"
+        >
+          <SectionTitle
+            title="Notable Achievements"
+            subtitle="Key milestones and recognition throughout my career journey."
+            className="ml-4 sm:ml-6 md:ml-10 text-xs sm:text-sm md:text-base mt-4 md:mt-10"
+          />
+        </motion.div>
 
         <div className="relative w-full mx-auto max-w-7xl flex-1 flex flex-col justify-center">
           <Carousel

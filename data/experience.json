@@ -1,66 +1,80 @@
 [
   {
     "id": "exp-1",
-    "title": "Senior Software Engineer",
-    "company": "TechCorp",
-    "period": "Jan 2022 - Present",
-    "location": "San Francisco, CA",
-    "description": "Leading the development of next-generation web applications with a focus on performance and user experience.",
-    "logo": "/logos/techcorp.svg",
-    "technologies": ["React", "TypeScript", "Node.js", "GraphQL"],
+    "title": "Research Intern",
+    "company": "e-Yantra, IIT Bombay",
+    "period": "May 2025 - Present",
+    "location": "Mumbai, India",
+    "description": "Working on Systematic Literature Review and developing AI tools for automating Thematic Analysis.",
+    "logo": "/images/e-Yantra-logo.jpg",
+    "technologies": ["AI", "LLMs", "Research", "Thematic Analysis", "Web Development"],
     "responsibilities": [
-      "Architected and implemented scalable frontend solutions",
-      "Led a team of 5 developers to deliver projects on schedule",
-      "Reduced application load time by 40% through code optimization",
-      "Implemented CI/CD pipelines to streamline the deployment process"
+      "Conducted a Systematic Literature Review on AI tools for qualitative analysis",
+      "Developed a tool for automating thematic analysis using LLMs",
+      "Collaborated with researchers to refine AI-assisted qualitative analysis methods"
+    ]
+  },
+  {
+    "id": "exp-5",
+    "title": "Freelance",
+    "company": "",
+    "period": "March 2025 - March 2025",
+    "location": "Mumbai, India",
+    "description": "Working on backend system for FlowGPT, a platform to create chains of prompts with various LLMs.",
+    "logo": "/images/freelancer-logo.svg",
+    "technologies": ["AI", "LLMs", "Backend development", "Web sockets", "Python", "FastAPI"],
+    "responsibilities": [
+      "Created a scalable backend to handle multiple LLMs and prompt chains",
+      "Implemented WebSocket communication for real-time updates",
+      "Developed logic for managing rollbacks, and quality control of prompts"
     ]
   },
   {
     "id": "exp-2",
-    "title": "Frontend Developer",
-    "company": "InnovateSoft",
-    "period": "Mar 2020 - Dec 2021",
-    "location": "Seattle, WA",
-    "description": "Developed responsive web applications with modern JavaScript frameworks.",
-    "logo": "/logos/innovatesoft.svg",
-    "technologies": ["Angular", "JavaScript", "SCSS", "REST APIs"],
+    "title": "Data Analysis and Research Intern",
+    "company": "e-Yantra, IIT Bombay",
+    "period": "May 2024 - July 2024",
+    "location": "Mumbai, India",
+    "description": "Focused on automating data collection and analysis for log generation using AI and visualization tools.",
+    "logo": "/images/e-Yantra-logo.jpg",
+    "technologies": ["OpenCV", "Research", "OCR", "Pandas", "Matplotlib", "Celonis"],
     "responsibilities": [
-      "Built and maintained responsive web applications",
-      "Collaborated with designers to implement pixel-perfect UI",
-      "Integrated frontend with backend services via REST APIs",
-      "Participated in code reviews and contributed to coding standards"
+      "Presented research at COMPUTE 2024 conference, by ACM India, and published by Springer Nature",
+      "Built a video-to-logs data pipeline using OpenCV and OCR",
+      "Visualized log data using process modelling tools like Celonis",
+      "Created visualizations from the processed data"
     ]
   },
   {
     "id": "exp-3",
-    "title": "Web Developer Intern",
-    "company": "StartupHub",
-    "period": "Jun 2019 - Feb 2020",
-    "location": "Austin, TX",
-    "description": "Assisted in the development of web applications for early-stage startups.",
-    "logo": "/logos/startuphub.svg",
-    "technologies": ["HTML", "CSS", "JavaScript", "jQuery"],
+    "title": "Backend Development Intern",
+    "company": "Engaze",
+    "period": "Dec 2023 - Jan 2024",
+    "location": "Remote",
+    "description": "Developed backend features and APIs for a social media platform.",
+    "logo": "/images/engaze_in_logo.jpg",
+    "technologies": ["Node.js", "MongoDB", "API Development"],
     "responsibilities": [
-      "Developed responsive landing pages for multiple clients",
-      "Assisted senior developers with bug fixes and feature implementation",
-      "Created interactive UI components using vanilla JavaScript",
-      "Optimized website performance and accessibility"
+      "Designed data models for social interactions",
+      "Implemented and tested RESTful APIs for user management and content sharing",
+      "Tested and optimized APIs",
+      "Collaborated with frontend team to integrate features"
     ]
   },
   {
     "id": "exp-4",
-    "title": "Junior Developer",
-    "company": "CodeAcademy",
-    "period": "Sep 2018 - May 2019",
-    "location": "Boston, MA",
-    "description": "Worked on educational web platforms aimed at teaching programming to beginners.",
-    "logo": "/logos/codeacademy.svg",
-    "technologies": ["React", "JavaScript", "Firebase", "Material UI"],
+    "title": "Android Development Intern",
+    "company": "SNDT Women's University",
+    "period": "July 2023 - Oct 2023",
+    "location": "Remote",
+    "description": "Built a healthcare app for managing COPD and Asthma using Kotlin and Jetpack Compose.",
+    "logo": "/images/sndt-logo.jpg",
+    "technologies": ["Kotlin", "Jetpack Compose", "Firebase", "Geofencing", "Weather API"],
     "responsibilities": [
-      "Contributed to the development of interactive coding exercises",
-      "Implemented user authentication and profile management features",
-      "Fixed UI/UX issues on the learning platform",
-      "Participated in user testing sessions to gather feedback"
+      "Developed the COPD-Asthma Healthcare Android application",
+      "Integrated real-time location, weather services and geo-fencing for location-based alerts",
+      "Integrated machine learning models to predict the severity of COPD based on user inputs",
+      "Implemented Firebase-based data storage and user interaction"
     ]
   }
 ]

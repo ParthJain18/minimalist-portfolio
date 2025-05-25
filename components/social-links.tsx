@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Twitter, Mail, ExternalLink } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, File } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import socialData from "@/data/social.json"
@@ -14,7 +14,7 @@ export default function SocialLinks({ className = "" }: { className?: string }) 
     linkedin: <Linkedin className="h-5 w-5" />,
     twitter: <Twitter className="h-5 w-5" />,
     email: <Mail className="h-5 w-5" />,
-    website: <ExternalLink className="h-5 w-5" />,
+    file: <File className="h-5 w-5" />,
   }
 
   const container = {

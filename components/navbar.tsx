@@ -13,13 +13,16 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
 
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
-    { name: "Experience", href: "/#experience" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Contact", href: "/#contact" },
-  ]
+  // Scroll to FullPageScroll sections by index
+  const scrollToSection = (index: number) => {
+    setIsOpen(false)
+    const container = document.getElementById('fullpage-container')
+    if (container && container.children[index]) {
+      (container.children[index] as HTMLElement).scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const navItems = ["Home", "Achievements", "Experience", "Projects", "Contact"]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,17 +47,17 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
+            {navItems.map((name, index) => (
+              <button
+                key={name}
+                type="button"
+                onClick={() => scrollToSection(index)}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  pathname === item.href ? "text-foreground" : "text-muted-foreground",
+                  "text-sm font-medium transition-colors hover:text-primary text-muted-foreground",
                 )}
               >
-                {item.name}
-              </Link>
+                {name}
+              </button>
             ))}
             <ModeToggle />
           </nav>
@@ -73,18 +76,17 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden border-b">
           <div className="container mx-auto px-4 py-4 space-y-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
+            {navItems.map((name, index) => (
+              <button
+                key={name}
+                type="button"
+                onClick={() => scrollToSection(index)}
                 className={cn(
-                  "block py-2 text-sm font-medium transition-colors hover:text-primary",
-                  pathname === item.href ? "text-foreground" : "text-muted-foreground",
+                  "block py-2 text-sm font-medium transition-colors hover:text-primary text-muted-foreground",
                 )}
               >
-                {item.name}
-              </Link>
+                {name}
+              </button>
             ))}
           </div>
         </div>

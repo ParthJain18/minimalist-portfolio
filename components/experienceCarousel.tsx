@@ -11,11 +11,10 @@ import {
   CarouselPrevious,
   type CarouselApi
 } from "@/components/ui/carousel"
-import { SectionTitle } from "@/components/ui/section-title"
 import { CarouselPagination } from "@/components/ui/carousel-pagination"
 import { ExperienceCard } from "@/components/experience-card"
 
-export default function ExperienceTimeline({ className = "" }: { className?: string }) {
+export default function ExperienceCarousel({ className = "" }: { className?: string }) {
   const [api, setApi] = useState<CarouselApi>()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
