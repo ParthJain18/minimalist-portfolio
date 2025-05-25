@@ -17,9 +17,8 @@ export default function Hero() {
     }, 3000)
     return () => clearInterval(interval)
   }, [titles.length])
-
   return (
-    <section className="snap-start flex flex-col items-center justify-start md:justify-center h-screen md:py-14 px-6 md:px-0 pt-20 md:pt-0 overflow-hidden">
+    <section className="snap-start flex flex-col items-center justify-start md:justify-center h-screen md:py-14 px-6 md:px-0 pt-12 md:pt-0 overflow-hidden">
       <div className="grid md:grid-cols-2 gap-8 md:gap-20 items-center w-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

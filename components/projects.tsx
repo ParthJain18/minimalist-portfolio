@@ -7,7 +7,7 @@ import ProjectGallery from "@/components/projectGallery"
 
 export default function Projects({ className = "" }: { className?: string }) {
   return (
-    <section className={cn("min-h-screen w-full flex items-start justify-center px-2 pt-20 md:pt-16", className)}>
+    <section className={cn("min-h-screen w-full flex items-start justify-center px-2 pt-4 md:pt-16", className)}>
       <div className="container flex flex-col px-2 sm:px-6 md:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
