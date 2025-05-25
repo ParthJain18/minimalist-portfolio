@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button"
 import achievementsData from "@/data/achievements.json"
 
 interface AchievementPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function AchievementPage({ params }: AchievementPageProps) {
-  const achievement = achievementsData.find((a) => a.slug === params.slug)
+export default async function AchievementPage({ params }: AchievementPageProps) {
+  const { slug } = await params
+  const achievement = achievementsData.find((a) => a.slug === slug)
 
   if (!achievement) {
     notFound()

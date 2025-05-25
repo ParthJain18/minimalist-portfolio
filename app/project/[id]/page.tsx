@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button"
 import projectsData from "@/data/projects.json"
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projectsData.find((p) => p.id === params.id)
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = await params
+  const project = projectsData.find((p) => p.id === id)
 
   if (!project) {
     notFound()
@@ -63,7 +64,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         ))}
       </div>
 
-      <div className="prose dark:prose-invert max-w-none">
+      {/* <div className="prose dark:prose-invert max-w-none">
         <h2>Overview</h2>
         <p>{project.description}</p>
 
@@ -91,7 +92,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             <p>{project.challenges}</p>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   )
 }

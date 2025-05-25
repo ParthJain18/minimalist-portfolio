@@ -18,28 +18,10 @@ import { motion } from "framer-motion"
 
 export default function Achievements({ className = "" }: { className?: string }) {
   const [api, setApi] = useState<CarouselApi>()
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
 
-  // Check for mobile viewport
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
 
   useEffect(() => {
     if (!api) return
-
-    api.on("select", () => {
-      setCurrentSlide(api.selectedScrollSnap())
-    })
-
     // Enable autoplay for both mobile and desktop
     const interval = setInterval(() => {
       api.scrollNext()

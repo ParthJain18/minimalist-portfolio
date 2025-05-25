@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import SocialLinks from "@/components/social-links"
 import profileData from "@/data/profile.json"
 
-export default function Hero({ className = "" }: { className?: string }) {
+export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0)
   const { name, titles, bio, photoUrl } = profileData
 

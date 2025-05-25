@@ -29,12 +29,12 @@ type Props = {
   breakpoints?: Partial<Breakpoints>;
 };
 
-export default function MediaQuery({ 
-  children, 
+export default function MediaQuery({
+  children,
   breakpoints: customBreakpoints = {}
 }: Props) {
   const breakpoints = { ...defaultBreakpoints, ...customBreakpoints };
-  
+
   const [matches, setMatches] = useState({
     isSm: false,
     isMd: false,
@@ -67,13 +67,7 @@ export default function MediaQuery({
     return () => {
       window.removeEventListener("resize", checkBreakpoints);
     };
-  }, [
-    breakpoints.sm,
-    breakpoints.md,
-    breakpoints.lg,
-    breakpoints.xl,
-    breakpoints["2xl"],
-  ]);
+  }, [breakpoints]);
 
   return children(matches);
 }

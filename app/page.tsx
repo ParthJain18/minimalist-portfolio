@@ -18,7 +18,7 @@ export default function Home() {
     // </div>
     <FullPageScroll>
       <FullPageScroll.Page>
-        <Hero className="" />
+        <Hero />
       </FullPageScroll.Page>
       <FullPageScroll.Page >
         <Achievements className="" />

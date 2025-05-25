@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button"
 import experienceData from "@/data/experience.json"
 
 interface ExperiencePageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function ExperiencePage({ params }: ExperiencePageProps) {
-  const experience = experienceData.find((exp) => exp.id === params.id)
+export default async function ExperiencePage({ params }: ExperiencePageProps) {
+  const { id } = await params
+  const experience = experienceData.find((exp) => exp.id === id)
 
   if (!experience) {
     notFound()
@@ -54,7 +55,7 @@ export default function ExperiencePage({ params }: ExperiencePageProps) {
           </div>
         </div>
       </div>
-
+      {/* 
       <div className="prose dark:prose-invert max-w-none">
         <h2>Overview</h2>
         <p>{experience.overview}</p>
@@ -87,7 +88,7 @@ export default function ExperiencePage({ params }: ExperiencePageProps) {
         </div>
 
         {experience.content && <div dangerouslySetInnerHTML={{ __html: experience.content }} />}
-      </div>
+      </div> */}
     </div>
   )
 }

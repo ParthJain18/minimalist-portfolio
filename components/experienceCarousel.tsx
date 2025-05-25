@@ -42,9 +42,8 @@ export default function ExperienceCarousel({ className = "" }: { className?: str
           opts={{ align: "center", loop: true }}
           className="w-full md:w-5/6 mx-auto"
           setApi={setApi}
-        >
-          <CarouselContent className="snap-x snap-mandatory md:px-4 gap-x-2 md:gap-x-4">
-            {experienceData.map((exp, index) => (
+        >          <CarouselContent className="snap-x snap-mandatory md:px-4 gap-x-2 md:gap-x-4">
+            {experienceData.map((exp) => (
               <CarouselItem
                 key={exp.id}
                 className="basis-full flex justify-center items-start pl-4"
