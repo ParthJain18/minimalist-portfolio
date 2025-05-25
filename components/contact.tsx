@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils"
 export default function Contact({ className = "" }: { className?: string }) {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -29,11 +30,10 @@ export default function Contact({ className = "" }: { className?: string }) {
       })
       if (!res.ok) throw new Error("Network error")
 
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      })
+      setIsSuccess(true)
       form.reset()
+
+      setTimeout(() => setIsSuccess(false), 3000)
     } catch {
       toast({
         variant: "destructive",
@@ -94,6 +94,16 @@ export default function Contact({ className = "" }: { className?: string }) {
               </label>
               <Textarea id="message" name="message" placeholder="Your message" rows={5} required />
             </div>
+            {isSuccess && (
+              <motion.p
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="text-green-600 text-sm text-center italic"
+              >
+                Message sent successfully. Thank you!
+              </motion.p>
+            )}
             <Button type="submit" size="lg" disabled={isSubmitting}>
               {isSubmitting ? (
                 "Sending..."
