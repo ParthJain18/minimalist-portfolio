@@ -39,10 +39,9 @@
     "logo": "/images/e-Yantra-logo.jpg",
     "technologies": ["OpenCV", "Research", "OCR", "Pandas", "Matplotlib", "Celonis"],
     "responsibilities": [
-      "Presented research at COMPUTE 2024 conference, by ACM India, and published by Springer Nature",
+      "Presented research at COMPUTE 2024 conference, by ACM India",
       "Built a video-to-logs data pipeline using OpenCV and OCR",
-      "Visualized log data using process modelling tools like Celonis",
-      "Created visualizations from the processed data"
+      "Visualized log data using process modelling tools like Celonis and other tools"
     ]
   },
   {

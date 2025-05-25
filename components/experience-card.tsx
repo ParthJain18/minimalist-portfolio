@@ -23,10 +23,14 @@ export function ExperienceCard({ experience }: { experience: ExperienceProps }) 
               transition-shadow duration-200 
               min-h-[28vh] md:min-h-[38vh] 
               flex flex-col justify-between 
+              p-0
+              sm:p-0
+              md:p-6
+              lg:p-6
               w-full 
-              sm:w-80    /* 20rem */
-              md:w-96    /* 24rem */
-              lg:w-[38rem] /* corrected from 18rem up to 28rem */
+              sm:w-80
+              md:w-96
+              lg:w-[42rem] 
               break-words
             "
         >
