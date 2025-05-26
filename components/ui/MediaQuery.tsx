@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 type Breakpoints = {
   sm: number;
@@ -33,7 +33,7 @@ export default function MediaQuery({
   children,
   breakpoints: customBreakpoints = {}
 }: Props) {
-  const breakpoints = { ...defaultBreakpoints, ...customBreakpoints };
+  const breakpoints = useMemo(() => ({ ...defaultBreakpoints, ...customBreakpoints }), [customBreakpoints]);
 
   const [matches, setMatches] = useState({
     isSm: false,
