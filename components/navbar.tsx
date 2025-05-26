@@ -47,9 +47,9 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-bold tracking-tighter transition-colors">
+          <p onClick={() => scrollToSection(0)} className="text-xl font-bold tracking-tighter transition-colors cursor-pointer">
             Portfolio
-          </Link>
+          </p>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">

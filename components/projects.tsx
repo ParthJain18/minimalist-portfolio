@@ -22,7 +22,7 @@ export default function Projects({ className = "" }: { className?: string }) {
             className="ml-4 sm:ml-6 md:ml-10 text-xs sm:text-sm md:text-base mt-4 md:mt-0"
           />
         </motion.div>
-        <div className="mt-10 sm:mt-10 md:mt-0 ml-2 sm:ml-0 md:mt-0">
+        <div className="mt-10 sm:mt-10 md:mt-0 mx-2 sm:mx-0 mr-0 md:mr-6">
           <ProjectGallery />
         </div>
       </div>
