@@ -47,9 +47,13 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <p onClick={() => scrollToSection(0)} className="text-xl font-bold tracking-tighter transition-colors cursor-pointer">
+          <button
+            onClick={() => scrollToSection(0)}
+            className="text-xl font-bold tracking-tighter transition-colors cursor-pointer bg-transparent border-none p-0 m-0"
+          >
             Portfolio
-          </p>
+          </button>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
