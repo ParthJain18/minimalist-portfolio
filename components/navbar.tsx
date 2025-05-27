@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "./mode-toggle"
@@ -9,6 +10,10 @@ import { cn } from "@/lib/utils"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+
+  // Check if we're on a detail page
+  const isDetailPage = pathname.includes('/project/') || pathname.includes('/achievement/') || pathname.includes('/experience/')
 
   // Scroll to FullPageScroll sections by index
   const scrollToSection = (index: number) => {
@@ -55,34 +60,45 @@ export default function Navbar() {
 
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            {navItems.map((name, index) => (
-              <button
-                key={name}
-                type="button"
-                onClick={() => scrollToSection(index)}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary text-muted-foreground",
-                )}
-              >
-                {name}
-              </button>
-            ))}
-            <ModeToggle />
-          </nav>
+          {!isDetailPage && (
+            <nav className="hidden md:flex items-center space-x-6">
+              {navItems.map((name, index) => (
+                <button
+                  key={name}
+                  type="button"
+                  onClick={() => scrollToSection(index)}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary text-muted-foreground",
+                  )}
+                >
+                  {name}
+                </button>
+              ))}
+              <ModeToggle />
+            </nav>
+          )}
+
+          {/* Mode toggle for detail pages */}
+          {isDetailPage && (
+            <div className="hidden md:flex">
+              <ModeToggle />
+            </div>
+          )}
 
           {/* Mobile Navigation Toggle */}
           <div className="flex md:hidden items-center space-x-2">
             <ModeToggle />
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
+            {!isDetailPage && (
+              <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
+                {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
+            )}
           </div>
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
-      {isOpen && (
+      {isOpen && !isDetailPage && (
         <div className="md:hidden border-b">
           <div className="container mx-auto px-4 py-4 space-y-3">
             {navItems.map((name, index) => (

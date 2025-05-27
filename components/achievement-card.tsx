@@ -78,9 +78,7 @@ export function AchievementCard({ achievement }: { achievement: AchievementProps
                             <Badge variant="outline" className="text-xs md:text-sm">{achievement.date}</Badge>
                         </>
                     )}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
+                </div>                <div className="flex flex-wrap gap-2">
                     {achievement.links ? (
                         achievement.links.map((link, i) => (
                             <Link key={i} href={link.url} target="_blank" rel="noopener noreferrer">
@@ -97,6 +95,13 @@ export function AchievementCard({ achievement }: { achievement: AchievementProps
                                 <ExternalLink size={16} className="h-4 w-4" />
                             </Button>
                         </Link>
+                    )}
+                    {achievement.slug && (
+                        <Button variant="outline" size="sm" asChild>
+                            <Link href={`/achievement/${achievement.slug}`}>
+                                Details
+                            </Link>
+                        </Button>
                     )}
                 </div>
             </CardContent>

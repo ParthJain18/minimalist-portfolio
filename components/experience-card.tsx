@@ -1,5 +1,7 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Calendar } from "lucide-react"
 
@@ -62,11 +64,17 @@ export function ExperienceCard({ experience }: { experience: ExperienceProps }) 
                             <li key={idx}>{res}</li>
                         ))}
                     </ul>
-                </div>
-                <div className="flex flex-wrap gap-1 mb-2 pt-2">
+                </div>                <div className="flex flex-wrap gap-1 mb-3 pt-2">
                     {experience.technologies.map((tech, idx) => (
                         <Badge key={idx} variant="outline" className="text-xs">{tech}</Badge>
                     ))}
+                </div>
+                <div className="mt-4 pt-3 border-t border-border/30">
+                    <Button variant="outline" size="sm" asChild className="w-full">
+                        <Link href={`/experience/${experience.id}`}>
+                            View Details
+                        </Link>
+                    </Button>
                 </div>
             </CardContent>
         </Card>

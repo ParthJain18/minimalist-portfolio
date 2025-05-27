@@ -18,8 +18,7 @@ export default function ProjectGallery() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                    >                        <Card className="h-80 flex flex-col overflow-hidden hover:shadow-md transition-shadow">
+                        viewport={{ once: true }}                    >                        <Card className="h-80 flex flex-col overflow-hidden hover:shadow-md transition-shadow">
                             <div className="relative h-28 w-full flex-shrink-0">
                                 <Image
                                     src={project.image || "/placeholder.svg"}
@@ -29,7 +28,7 @@ export default function ProjectGallery() {
                                     className="object-cover object-top"
                                 />
                             </div>
-                            <CardContent className="flex-grow px-4 pt-0">
+                            <CardContent className="flex-grow px-4 pt-0 min-h-0">
                                 <h3 className="text-md font-semibold mb-1">{project.title}</h3>
                                 <p className="text-muted-foreground mb-2 text-xs">
                                     {project.description}
@@ -45,7 +44,7 @@ export default function ProjectGallery() {
                                     ))}
                                 </div>
                             </CardContent>
-                            <CardFooter className="flex justify-between p-4 pt-0">
+                            <CardFooter className="flex justify-between p-4 pt-0 flex-shrink-0 mt-auto">
                                 <div className="flex gap-2">
                                     {project.demoUrl && (
                                         <Button

@@ -80,6 +80,44 @@ body {
   height: 100%;
 }
 
+/* Allow scrolling for detail pages */
+.detail-page {
+  overflow: auto;
+  height: 100vh;
+  /* Improved scrollbar styling for detail pages */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.3) transparent;
+}
+
+.detail-page::-webkit-scrollbar {
+  width: 6px;
+}
+
+.detail-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.detail-page::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
+.detail-page::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.dark .detail-page {
+  scrollbar-color: rgba(255,255,255,0.4) transparent;
+}
+
+.dark .detail-page::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.dark .detail-page::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255,255,255,0.6);
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

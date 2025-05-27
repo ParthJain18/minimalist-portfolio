@@ -65,9 +65,7 @@ const FullPageScroll: React.FC<FullPageScrollProps> & { Page: typeof Page } = ({
     return () => {
       items.forEach((el) => observer.unobserve(el));
     };
-  }, [pages]);
-
-  return (
+  }, [pages]); return (
     <div className="relative">
       <div
         id="fullpage-container"

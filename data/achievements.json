@@ -34,7 +34,7 @@
     "content": "<p>This hardware-focused hackathon challenged participants to bridge physical devices with smart software. Our team developed a travel assistant app powered by AI agents, integrated with real-time sensor data, maps, and crash detection.</p><h3>Key Contributions:</h3><ul><li>Developed a context-aware AI agent using LangGraph for dynamic route queries</li><li>Built a crash detection model with YOLO v11 trained on custom dataset</li><li>Created a real-time smart routing system integrating incident data</li><li>Built a QGIS-powered city dashboard for better administrative planning</li></ul><p>This was a milestone victory that helped me expand my skills beyond traditional software into IoT and smart city technologies.</p>",
     "gallery": [
       {
-        "url": "images/unplugged.jpg",
+        "url": "images/unplugged.png",
         "caption": "Live demo of crash detection and smart routing"
       }
     ],
