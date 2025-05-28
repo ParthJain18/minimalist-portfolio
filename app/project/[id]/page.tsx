@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import type { Metadata } from "next"
 import projectsData from "@/data/projects.json"
 import DetailPageLayout from "@/components/detail-page-layout"
 
@@ -6,6 +7,23 @@ interface ProjectPageProps {
   params: Promise<{
     id: string
   }>
+}
+
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const { id } = await params
+  const project = projectsData.find((p) => p.id === id)
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The project you're looking for could not be found."
+    }
+  }
+
+  return {
+    title: `${project.title} - Project`,
+    description: project.description || `${project.title} - A project by Parth Jain showcasing ${project.technologies?.slice(0, 3).join(", ")} development.`,
+  }
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {

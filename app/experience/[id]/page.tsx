@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import type { Metadata } from "next"
 import experienceData from "@/data/experience.json"
 import DetailPageLayout from "@/components/detail-page-layout"
 
@@ -6,6 +7,23 @@ interface ExperiencePageProps {
   params: Promise<{
     id: string
   }>
+}
+
+export async function generateMetadata({ params }: ExperiencePageProps): Promise<Metadata> {
+  const { id } = await params
+  const experience = experienceData.find((exp) => exp.id === id)
+
+  if (!experience) {
+    return {
+      title: "Experience Not Found",
+      description: "The experience you're looking for could not be found."
+    }
+  }
+
+  return {
+    title: `${experience.title} at ${experience.company} - Experience`,
+    description: experience.description || `${experience.title} position at ${experience.company} - Professional experience by Parth Jain.`,
+  }
 }
 
 export default async function ExperiencePage({ params }: ExperiencePageProps) {

@@ -9,8 +9,24 @@ import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Parth Jain",
-  description: "A modern minimalist portfolio showcasing my work and experience",
+  title: {
+    default: "Parth Jain - AI & Full Stack Developer",
+    template: "%s | Parth Jain"
+  },
+  description: "Aspiring AI and Software Engineer with hands-on experience in research, full-stack development, android development, and building AI-powered tools to solve real-world problems.",
+  openGraph: {
+    url: "https://parthjain.works/",
+    title: "Parth Jain - AI & Full Stack Developer",
+    description: "Aspiring AI and Software Engineer with hands-on experience in research, full-stack development, android development, and building AI-powered tools to solve real-world problems.",
+    images: [
+      {
+        url: "https://parthjain.works/images/profile-pic.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Parth Jain - AI & Full Stack Developer",
+      }
+    ],
+  },
 }
 
 export default function RootLayout({
