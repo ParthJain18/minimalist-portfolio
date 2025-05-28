@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { ExternalLink, Github, Calendar, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { loadMarkdownContent } from "@/lib/markdown"
+import { loadMDXContent } from "@/lib/mdx"
 import BackButton from "@/components/back-button"
 
 interface DetailPageLink {
@@ -40,9 +40,8 @@ export default async function DetailPageLayout({
     backHref,
     markdownFile,
     children
-}: DetailPageProps) {
-    // Load markdown content if specified
-    const markdownContent = markdownFile ? await loadMarkdownContent(markdownFile) : null
+}: DetailPageProps) {    // Load MDX content if specified
+    const MDXContent = markdownFile ? await loadMDXContent(markdownFile) : null
 
     return (
         <div className="detail-page">
@@ -140,14 +139,13 @@ export default async function DetailPageLayout({
                 </div>
 
                 {/* Content Section */}
-                <div className="prose dark:prose-invert max-w-none">
-                    {/* Description */}
+                <div className="prose dark:prose-invert max-w-none">                    {/* Description */}
                     {description && (
                         <p className="lead">{description}</p>
-                    )}                {/* Markdown Content */}
-                    {markdownContent && (
-                        <div dangerouslySetInnerHTML={{ __html: markdownContent }} />
                     )}
+
+                    {/* MDX Content */}
+                    {MDXContent && <MDXContent />}
 
                     {/* Additional Children Content */}
                     {children}
