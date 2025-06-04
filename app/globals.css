@@ -69,9 +69,42 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    position: relative;
   }
+  
+  /* Only show dot pattern on larger screens (tablet and desktop) */
+  @media (min-width: 768px) {
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(circle at 1.5px 1.5px, hsl(var(--foreground) / 0.12) 1.5px, transparent 0);
+      background-size: 28px 28px;
+      mask: linear-gradient(90deg, white 0%, transparent 25%, transparent 75%, white 100%);
+      -webkit-mask: linear-gradient(90deg, white 0%, transparent 25%, transparent 75%, white 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+  
+  /* Alternative diagonal lines pattern - uncomment to try this instead */
+  
+  /* body {
+    @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at center, transparent 35%, hsl(var(--foreground) / 0.025) 100%),
+      linear-gradient(45deg, hsl(var(--foreground) / 0.05) 1px, transparent 1px),
+      linear-gradient(-45deg, hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 28px 28px, 28px 28px;
+    background-attachment: fixed;
+  }
+  */
 }
 
 html,
