@@ -1,10 +1,19 @@
 [
-    {
+  {
     "id": "rag-agent-browser",
     "title": "Recall Agent Browser",
     "description": "A browser extension that uses RAG to enhance web browsing by providing context-aware information retrieval and summarization, with added features like AI agent for task automation.",
     "image": "/images/browser.jpg",
-    "technologies": ["React", "Javascript", "FastAPI", "FAISS", "LangGraph", "LLMs"],
+    "technologies": [
+      "React",
+      "Javascript",
+      "FastAPI",
+      "FAISS",
+      "LangGraph",
+      "LLMs"
+    ],
+    "type": "college-project",
+    "favorite": true,
     "demoUrl": "",
     "githubUrl": ""
   },
@@ -13,7 +22,16 @@
     "title": "Hotel booking SQL + RAG Chatbot",
     "description": "An intelligent conversational interface for querying hotel booking data using natural language processing and SQL generation.",
     "image": "/images/sql-chatbot.png",
-    "technologies": ["Python", "LangGraph", "FastAPI", "SQLite", "LLMs", "agentic-ai"],
+    "technologies": [
+      "Python",
+      "LangGraph",
+      "FastAPI",
+      "SQLite",
+      "LLMs",
+      "agentic-ai"
+    ],
+    "type": "side-project",
+    "favorite": false,
     "demoUrl": "https://hotelchatbot.parthjain.works/dashboard/",
     "githubUrl": "https://github.com/ParthJain18/hotel-booking-sql-chatbot"
   },
@@ -22,7 +40,16 @@
     "title": "Flow GPT",
     "description": "A website to chain different kind of LLM prompts such as text generation, image generation and quality control.",
     "image": "/images/flow-gpt.png",
-    "technologies": ["Next.js", "Neon db", "PostgreSQL", "LLMs", "FastAPI", "WebSockets"],
+    "technologies": [
+      "Next.js",
+      "Neon db",
+      "PostgreSQL",
+      "LLMs",
+      "FastAPI",
+      "WebSockets"
+    ],
+    "type": "freelance",
+    "favorite": false,
     "demoUrl": "https://flowgpt.parthjain.works/",
     "githubUrl": ""
   },
@@ -31,7 +58,14 @@
     "title": "LLM Literature Review Assistant",
     "description": "Python notebooks designed to semi-automate the initial screening phase of a Systematic Literature Review (SLR) or general research paper discovery.",
     "image": "/images/slr-notebooks.png",
-    "technologies": ["Python", "Jupyter Notebook", "Pandas", "Research"],
+    "technologies": [
+      "Python",
+      "Jupyter Notebook",
+      "Pandas",
+      "Research"
+    ],
+    "type": "internship",
+    "favorite": false,
     "demoUrl": "",
     "githubUrl": "https://github.com/ParthJain18/LLM-Literature-Review-Assistant"
   },
@@ -40,7 +74,15 @@
     "title": "Agentic Travel Assistant",
     "description": "A travel assistant application that uses AI agents to provide real-time environmental data, travel information, route optimization, and incident alerts.",
     "image": "/images/travel-assistant.jpg",
-    "technologies": ["React Native", "Flask", "LangGraph", "LLMs", "Neon db"],
+    "technologies": [
+      "React Native",
+      "Flask",
+      "LangGraph",
+      "LLMs",
+      "Neon db"
+    ],
+    "type": "hackathon",
+    "favorite": true,
     "demoUrl": "https://youtube.com/shorts/Gv3_Bk5RpW0?feature=share",
     "githubUrl": "https://github.com/Asim-Shah-2004/hardware-hack-dj"
   },
@@ -49,7 +91,15 @@
     "title": "Eldcare",
     "description": "EldCare is a LangGraph-based agentic system that helps elders check their schedules via natural language, while allowing doctors and relatives to manage and update those schedules easily.",
     "image": "/images/eldcare.png",
-    "technologies": ["React", "Flask", "LangGraph", "LLMs", "Firebase"],
+    "technologies": [
+      "React",
+      "Flask",
+      "LangGraph",
+      "LLMs",
+      "Firebase"
+    ],
+    "type": "college-project",
+    "favorite": true,
     "demoUrl": "https://eldcare.vercel.app/",
     "githubUrl": "https://github.com/ParthJain18/EldCare"
   },
@@ -58,7 +108,14 @@
     "title": "Vanguard",
     "description": "A line follower robot that navigates war-ridden terrain using CNN model and Dijkstra algorithm.",
     "image": "/images/vanguard.png",
-    "technologies": ["Robotics", "CNN", "Dijkstra's Algorithm", "Sockets"],
+    "technologies": [
+      "Robotics",
+      "CNN",
+      "Dijkstra's Algorithm",
+      "Sockets"
+    ],
+    "type": "hackathon",
+    "favorite": true,
     "demoUrl": "https://youtu.be/sCgLaikrUGs",
     "githubUrl": "https://github.com/akashkolakkal/eyrc23_GG_1470"
   },
@@ -67,7 +124,13 @@
     "title": "Minimalist Portfolio Website",
     "description": "A personal portfolio website showcasing my projects, skills, and experience with a modern minimalist design.",
     "image": "/images/portfolio.png",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "type": "side-project",
+    "favorite": false,
     "demoUrl": "https://parthjain.works/",
     "githubUrl": "https://github.com/ParthJain18/minimalist-portfolio"
   },
@@ -76,7 +139,15 @@
     "title": "Fluent Flow",
     "description": "A Flutter based app that helps users learn new languages through live translations and LLM based suggestions.",
     "image": "/images/fluent-flow.png",
-    "technologies": ["Flutter", "Dart", "LLMs", "Firebase", "OCR"],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "LLMs",
+      "Firebase",
+      "OCR"
+    ],
+    "type": "college-project",
+    "favorite": false,
     "demoUrl": "",
     "githubUrl": "https://github.com/ParthJain18/fluent_flow"
   }
