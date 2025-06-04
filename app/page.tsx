@@ -9,13 +9,6 @@ import FullPageScroll from "@/components/ui/FullPageScroll"
 
 export default function Home() {
   return (
-    // <div className="h-screen overflow-y-scroll snap-y snap-mandatory no-scrollbar">
-    //   <Hero className="snap-start" />
-    //   <Achievements className="snap-start" />
-    //   <Experience className="snap-start" />
-    //   <Projects className="snap-start" />
-    //   <Contact className="snap-start" />
-    // </div>
     <FullPageScroll>
       <FullPageScroll.Page>
         <Hero />
