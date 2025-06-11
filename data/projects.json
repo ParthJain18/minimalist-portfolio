@@ -15,7 +15,7 @@
     "type": "college-project",
     "favorite": true,
     "demoUrl": "",
-    "githubUrl": ""
+    "githubUrl": "https://github.com/ParthJain18/AI_browser"
   },
   {
     "id": "hotel-booking-sql-chatbot",
@@ -150,5 +150,23 @@
     "favorite": false,
     "demoUrl": "",
     "githubUrl": "https://github.com/ParthJain18/fluent_flow"
+  },
+  {
+    "id": "copd-asthma-welfare",
+    "title": "COPD Asthma Welfare",
+    "description": "An android app that monitors the weather conditions specific to diseases like Asthma, and COPD and alert the user on about unhealthy/ potentially hazardous conditions.",
+    "image": "/images/copd-asthma.png",
+    "technologies": [
+      "Android",
+      "Kotlin",
+      "Geofencing",
+      "Firebase",
+      "Weather API",
+      "location services"
+    ],
+    "type": "internship",
+    "favorite": true,
+    "demoUrl": "",
+    "githubUrl": "https://github.com/ParthJain18/Asthma-COPD-Welfare"
   }
 ]
