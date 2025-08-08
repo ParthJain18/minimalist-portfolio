@@ -18,7 +18,7 @@ import { motion } from "framer-motion"
 
 export default function Achievements({ className = "" }: { className?: string }) {
   const plugin = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
+    Autoplay({ delay: 5000, stopOnInteraction: false })
   )
 
   return (
@@ -46,8 +46,10 @@ export default function Achievements({ className = "" }: { className?: string })
               loop: true,
             }}
             className="w-full md:w-5/6 mx-auto"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
+            onMouseDown={() => plugin.current.stop()}
+            onMouseUp={() => plugin.current.play()}
+            onTouchStart={() => plugin.current.stop()}
+            onTouchEnd={() => plugin.current.play()}
           >
             <CarouselContent className="snap-x snap-mandatory md:px-4 gap-x-2 md:gap-x-4">
               {achievementsData.map((achievement, index) => (
