@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
+import Autoplay from "embla-carousel-autoplay"
 import { cn } from "@/lib/utils"
 import experienceData from "@/data/experience.json"
 import {
@@ -18,6 +19,9 @@ export default function ExperienceCarousel({ className = "" }: { className?: str
   const [api, setApi] = useState<CarouselApi>()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false })
+  )
 
   // mobile detection
   useEffect(() => {
@@ -31,16 +35,21 @@ export default function ExperienceCarousel({ className = "" }: { className?: str
   useEffect(() => {
     if (!api) return
     api.on("select", () => setCurrentSlide(api.selectedScrollSnap()))
-    const interval = setInterval(() => api.scrollNext(), 5000)
-    return () => clearInterval(interval)
   }, [api])
+
   return (
     <div className={cn("w-full flex flex-col items-center justify-center", className)}>
       <div className="relative w-full mx-auto max-w-7xl">
         <Carousel
+          plugins={[plugin.current]}
           opts={{ align: "center", loop: true }}
           className="w-full md:w-5/6 mx-auto relative"
-          setApi={setApi}>
+          setApi={setApi}
+          onMouseDown={() => plugin.current.stop()}
+          onMouseUp={() => plugin.current.play()}
+          onTouchStart={() => plugin.current.stop()}
+          onTouchEnd={() => plugin.current.play()}
+        >
           <CarouselContent className="snap-x snap-mandatory md:px-4 gap-x-2 md:gap-x-1">
             {experienceData.map((exp, index) => (
               <CarouselItem
