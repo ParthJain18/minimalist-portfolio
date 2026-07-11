@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useRef } from "react"
+import Autoplay from "embla-carousel-autoplay"
 import { cn } from "@/lib/utils"
 import achievementsData from "@/data/achievements.json"
 import {
@@ -9,7 +10,6 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi
 } from "@/components/ui/carousel"
 import { SectionTitle } from "@/components/ui/section-title"
 import { AchievementCard } from "@/components/achievement-card"
@@ -17,18 +17,10 @@ import { motion } from "framer-motion"
 
 
 export default function Achievements({ className = "" }: { className?: string }) {
-  const [api, setApi] = useState<CarouselApi>()
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false })
+  )
 
-
-  useEffect(() => {
-    if (!api) return
-    // Enable autoplay for both mobile and desktop
-    const interval = setInterval(() => {
-      api.scrollNext()
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [api])
   return (
     <section className={cn("min-h-screen w-full flex items-start justify-center px-2 pt-4 md:pt-16", className)}>
       <div className="container flex flex-col px-2 sm:px-6 md:px-4">
@@ -48,12 +40,16 @@ export default function Achievements({ className = "" }: { className?: string })
 
         <div className="relative w-full mx-auto max-w-7xl flex-1 flex flex-col justify-center">
           <Carousel
+            plugins={[plugin.current]}
             opts={{
               align: "center",
               loop: true,
             }}
             className="w-full md:w-5/6 mx-auto"
-            setApi={setApi}
+            onMouseDown={() => plugin.current.stop()}
+            onMouseUp={() => plugin.current.play()}
+            onTouchStart={() => plugin.current.stop()}
+            onTouchEnd={() => plugin.current.play()}
           >
             <CarouselContent className="snap-x snap-mandatory md:px-4 gap-x-2 md:gap-x-4">
               {achievementsData.map((achievement, index) => (
