@@ -1,5 +1,35 @@
 [
   {
+    "id": "exp-6",
+    "title": "Systems Engineer (Data Engineering & MLOps)",
+    "company": "Tata Consultancy Services (GE Healthcare Project)",
+    "period": "Dec 2025 - Present",
+    "location": "Bangalore",
+    "description": "Managing a TB-scale healthcare data lake and deploying machine learning models into production environments.",
+    "logo": "/images/tcs-logo.png",
+    "technologies": ["AWS Glue", "AWS Step Functions", "Amazon SageMaker", "ETL Pipelines", "Data Engineering"],
+    "responsibilities": [
+      "Built ETL pipelines for daily incremental data batches",
+      "Deployed machine learning models using Amazon SageMaker",
+      "Automated workflows for predictive analytics"
+    ]
+  },
+  {
+    "id": "exp-7",
+    "title": "AI Engineering Intern",
+    "company": "PGAGI",
+    "period": "July 2025 - Nov 2025",
+    "location": "Remote",
+    "description": "Optimized GPU pipelines and built real-time, agentic AI microservices for video generation and debugging.",
+    "logo": "/images/pgagi-logo.png",
+    "technologies": ["H100 GPUs", "Gemini Live API", "WebSockets", "AI Agents", "Python"],
+    "responsibilities": [
+      "Redesigned a short video generation pipeline to cut latency by 80%",
+      "Created a real-time interview microservice with bi-directional audio",
+      "Built an autonomous debugging AI agent for Figma"
+    ]
+  },
+  {
     "id": "exp-1",
     "title": "Research Intern",
     "company": "e-Yantra, IIT Bombay",

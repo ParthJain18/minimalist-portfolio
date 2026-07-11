@@ -18,6 +18,23 @@
     "githubUrl": "https://github.com/ParthJain18/AI_browser"
   },
   {
+    "id": "homelab-infrastructure",
+    "title": "Self-Hosted Homelab Infrastructure",
+    "description": "A custom-configured Ubuntu home server running a robust stack of 18+ Dockerized services for cloud storage, system monitoring, and media management.",
+    "image": "/images/homelab.png",
+    "technologies": [
+      "Docker Compose",
+      "Ubuntu Linux",
+      "Cloudflared",
+      "Bash/Zsh",
+      "Networking"
+    ],
+    "type": "side-project",
+    "favorite": true,
+    "demoUrl": "",
+    "githubUrl": ""
+  },
+  {
     "id": "hotel-booking-sql-chatbot",
     "title": "Hotel booking SQL + RAG Chatbot",
     "description": "An intelligent conversational interface for querying hotel booking data using natural language processing and SQL generation.",

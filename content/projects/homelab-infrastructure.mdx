@@ -1,0 +1,30 @@
+# Homelab & Infrastructure Management
+
+A custom-configured, self-hosted Linux server environment built to manage personal cloud storage, automated media curation, and system metrics. This project serves as a practical sandbox for networking, containerization, and Linux system administration.
+
+## System Architecture
+
+| Component | Specification |
+| --------- | ------------- |
+| **OS** | Linux Mint 22.2 x86_64 (6.17.0-29-generic) |
+| **Hardware** | 4GB RAM / 4GB Swap / 1.4TB Total Storage / Intel i5-4440 (4) @ 3.300GHz|
+| **Environment** | Oh My Zsh, Rust-based CLI tools (batcat, lsd, zoxide) |
+| **Exposure** | Secure reverse proxy via Cloudflare Tunnels (Cloudflared) |
+
+## Core Infrastructure & Management
+All services are containerized and managed via Docker Compose with strictly organized configuration directories.
+- **Homepage:** Central application dashboard and server landing page
+- **Uptime Kuma & Deck Status:** Self-hosted monitoring, status pages, and external hardware bridge
+- **Kopia:** Fast, encrypted backup utility
+- **Watchtower:** Automated Docker container base image updates
+
+## Personal Cloud & Productivity Services
+- **Nextcloud:** Complete file hosting and collaboration platform
+- **Docmost:** Collaborative wiki and documentation software
+- **Immich:** High-performance, self-hosted photo and video backup solution
+- **Dawarich:** Location tracker and travel history mapping platform
+- **Copyparty:** Ultra-lightweight utility for rapid, ad-hoc file transfers
+
+## Custom Automation
+- **ByParr:** A custom Python/UV-powered proxy running on port 8191 to manage external requests and bypass strict protections.
+- **Shell Scripting:** Engineered custom `yt-dlp` scripts for downloading, converting, and embedding metadata into audiobooks directly to server storage.
