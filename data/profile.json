@@ -1,7 +1,14 @@
 {
   "name": "Parth Jain",
-  "titles": ["AI/ML Enthusiast", "Android Developer", "Backend Developer", "Python Developer", "Problem Solver", "Chess Enthusiast"],
-  "location": "Mumbai, India",
-  "bio": "Aspiring AI and Software Engineer with hands-on experience in research, full-stack development, android development, and building AI-powered tools to solve real-world problems.",
+  "titles": [
+    "Systems Engineer",
+    "AI/ML Engineer",
+    "Data Engineer",
+    "Backend Developer",
+    "Homelab Enthusiast",
+    "Chess Enthusiast"
+  ],
+  "location": "Bangalore, India",
+  "bio": "Systems Engineer and AI Developer with hands-on experience building TB-scale data pipelines, deploying machine learning models to production, and engineering high-performance agentic AI microservices. Passionate about solving complex real-world problems through robust infrastructure and scalable software.",
   "photoUrl": "/images/profile-pic.jpeg"
 }
